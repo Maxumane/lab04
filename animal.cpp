@@ -4,6 +4,9 @@
 
 #include "animal.hpp"
 #include <iostream>
+using namespace std;
+
+long animal::animalNo = 0;
 
 animal::animal() {
     isAlive = true;

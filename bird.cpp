@@ -40,6 +40,6 @@ void bird::sleep() {
 ostream& operator<< (ostream& o, const bird& conAn) {
     o << "animal id: " << conAn.id << " Living: " << conAn.isAlive << "animals age: "
       << conAn.age << " X coordinate: " << conAn.locationX <<
-      " Y coordinate: " << conAn.locationY << endl;
+      " Y coordinate: " << conAn.locationY << " loc_z: " << conAn.locationZ << endl;
     return o;
 }

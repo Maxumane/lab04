@@ -38,6 +38,19 @@ void canine::sleep() {
     cout << "canine of animal id: " << id << " is sleeping" << endl;
 }
 
+void canine::hunt(animal* prey) {
+    if (
+            abs(this->locationX - prey->getXcoord()) < 1
+            && abs(this->locationY - prey->getYcoord()) < 1
+            && abs(this->locationZ - prey->getZcoord()) < 1
+            ) {
+        prey->setAlive(false);
+        cout << "canine has hunted down prey of animal id: " << prey->getId() << endl;
+    } else {
+        cout << "canine has failed to hunt " << prey->getId() << endl;
+    }
+}
+
 ostream& operator<< (ostream& o, const canine& conAn) {
     o << "animal id: " << conAn.id << " Living: " << conAn.isAlive << "animals age: "
       << conAn.age << " X coordinate: " << conAn.locationX <<
